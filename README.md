@@ -1,10 +1,12 @@
 This notebook is used to load data  to Elasticsearch in efficient way using cloud api, cloud username and password, and to localhost. this file having three classes.
 
+# Using Elk_api class
+
 If you are trying to load data using cloud api, then use Elk_api() class.
 
 first you need to get api key from elasticsearch by executing these lines of code in dev tools in Kibana.
 
-# curl to get api details
+curl to get api details
 
 POST /_security/api_key?pretty
 {
@@ -28,11 +30,13 @@ Example:
 ek = Elk_api('example.ini')
 ek.load_data('file_name.csv', 'index_name')
 
+# Using Elk_cloud class
+
 If you are trying to load data using cloud username and password, then use Elk_cloud() class.
 
 Similar to api class you nedd to create .ini file and pass it to the class 
 
-# Use the below mentioned lines to create .ini file
+Use the below mentioned lines to create .ini file
 
 [ELASTIC]
 cloud_id = DEPLOYMENT_NAME:CLOUD_ID_DETAILS
@@ -42,6 +46,8 @@ password = LONGPASSWORD
 Example:
 ek = Elk_api('example.ini')
 ek.load_data('file_name.csv', 'index_name')
+
+# Using Elk_local class
 
 If you are trying to load data to localhost, then use Elk_local() class.
 
