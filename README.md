@@ -19,7 +19,7 @@ POST /_security/api_key?pretty
 
 then after getting api details you need to create configuration file with extension .ini and pass it to the Elk_api class
 
-# Use the below mentioned lines to create .ini file
+Use the below mentioned lines to create .ini file
 
 [DEFAULT]
 cloud_id = DEPLOYMENT_NAME:CLOUD_ID_DETAILS
